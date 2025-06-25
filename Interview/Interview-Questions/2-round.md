@@ -77,54 +77,62 @@ When you're ready, say **“Next”** and I’ll ask a question for **Earn Trust
 
 ---
 
-### 🤝 Case Study 1: **Pushing Back on Risky Client Request (Skuchain Project)**
+Excellent, Veera — this is a very strong and **honest** case study for **Earn Trust**. It shows not only technical depth but your **accountability and proactive ownership**.
 
-**Situation:**
-While building Skuchain (multi-tenant supply chain SaaS), a client requested custom logic requiring unsafe direct SQL access, risking tenancy isolation.
-
-**Task:**
-You had to ensure client satisfaction while protecting system design and data security.
-
-**Action:**
-You:
-
-* Set up a stakeholder meeting with technical leads
-* Clearly explained the risk of breaking tenant boundaries
-* Proposed a safe alternative using scoped API wrappers and Dynamo query abstraction
-
-**Result:**
-Client agreed to the approach
-
-* You delivered the feature **2 sprints earlier**
-* System design stayed clean and extensible
-* Team recognized you for upholding engineering standards without conflict
-
-🎯 **Demonstrates:** Speaking up, earning credibility with both client and peers.
+Here’s my structured feedback and polishing tips to make it shine in the interview:
 
 ---
 
-### 🤝 Case Study 2: **Refactoring Legacy Code to Onboard New Developers Faster**
+## ✅ What You Did Well
 
-**Situation:**
-At your current Red Hat project, you inherited a legacy app built a decade ago with poor standards and documentation — while 3 new developers were scheduled to join.
-
-**Task:**
-You wanted to minimize onboarding friction and technical debt.
-
-**Action:**
-You:
-
-* Introduced service-level documentation with code ownership
-* Added ESLint, Prettier, and GitHub PR templates
-* Set up pre-commit hooks and centralized logging with JSON + CloudWatch
-* Created bootstrap templates for new modules
-
-**Result:**
-
-* New hires became productive in <1 week
-* PR rejection rate dropped by 40%
-* Team leads appreciated the systematic, scalable improvements
-
-🎯 **Demonstrates:** Long-term thinking, accountability, and integrity.
+| Category                   | Feedback                                                                                         |
+| -------------------------- | ------------------------------------------------------------------------------------------------ |
+| ✅ **Admitting oversight**  | You clearly acknowledged that you initially missed adding worker pools and efficient DB handling |
+| ✅ **Taking ownership**     | You didn’t blame infra or other teams — you investigated and fixed it                            |
+| ✅ **Customer-centric fix** | Focused on improving **customer latency**, aligning directly with trust-building                 |
+| ✅ **Scalable solution**    | Use of **RDS Proxy + caching + indexing** shows a thoughtful, layered fix                        |
+| ✅ **Quantified impact**    | Brought down response time from **2-3s to 200ms** — that’s a huge performance gain               |
 
 ---
+
+## 🛠 Suggestions to Improve the Flow
+
+### 1. Begin with the **problem clearly**
+
+> *“In our Skuchain multi-tenant platform, as users scaled from <10 to 100+, latency for dashboard access jumped from <1s to 3s+, affecting customer experience.”*
+
+### 2. Briefly say what **mistake you made**
+
+> *“Initially, we didn’t implement proper connection pooling or use RDS Proxy. I missed recognizing this during design reviews, which impacted performance under scale.”*
+
+### 3. Emphasize **your proactive fix**
+
+> *“I took full ownership to profile queries, add worker pools, and integrate RDS Proxy. We also implemented indexing and Memcached for frequently accessed data.”*
+
+### 4. State **Result crisply**
+
+> *“This reduced query latency from \~3s to \~250ms across tenants. Customers reported significant improvement, and it rebuilt trust with our largest clients.”*
+
+---
+
+## 🔁 STAR Format Polished Summary
+
+> **S:** At Skuchain, as our multi-tenant SaaS scaled from <10 to 100+ clients, users began experiencing dashboard delays — query latency increased from <1s to 3s+.
+> **T:** As fullstack owner of the backend and DB layer, I was responsible for fixing performance and ensuring customer trust.
+> **A:** I investigated and realized we hadn’t used connection pooling or RDS Proxy. I led integration of RDS Proxy, added Postgres indexes, and implemented Memcached.
+> **R:** This reduced average query response time from 3s to \~250ms — a 10x improvement. Customers were delighted, and trust in the platform was restored.
+
+---
+
+### 🙌 Tip Before the Interview
+
+If they ask a follow-up like:
+
+> *“Why didn’t you catch this in the beginning?”*
+
+You can say:
+
+> *“At the time, the tenant load was very low. I underestimated the scale-up risk. But once the symptoms appeared, I prioritized a fix immediately and also added scale tests going forward to avoid blind spots.”*
+
+---
+
