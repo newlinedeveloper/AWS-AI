@@ -1,6 +1,4 @@
-Thanks, Veera. Based on your **resume** and experience, here are **tailored real-life case studies** aligned with today’s Amazon Leadership Principles: **Think Big** and **Earn Trust** — written in STAR format using your actual projects and impact.
 
----
 
 ## ✅ Think Big (2 Real Case Studies)
 
